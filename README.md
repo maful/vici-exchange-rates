@@ -2,6 +2,10 @@
 
 > A Simple and Rich for Exchange Rates
 
+![CI](https://github.com/maful/vici-exchange-rates/workflows/CI/badge.svg?branch=master)
+[![Gem Version](https://badge.fury.io/rb/vici-exchange-rates.svg)](https://badge.fury.io/rb/vici-exchange-rates)
+[![GitHub license](https://img.shields.io/github/license/maful/vici-exchange-rates)](https://github.com/maful/vici-exchange-rates/blob/master/LICENSE.txt)
+
 **Vici::ExchangeRates** is an unofficial SDK for the [ExchangeRatesAPI](https://exchangeratesapi.io). Exchange rates API is a free service for current and historical foreign exchange rates [published by the European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html).
 
 ### Note
