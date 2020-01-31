@@ -1,18 +1,19 @@
-name: CI
-on: [push, pull_request]
+name: Ruby
+
+on: [push]
+
 jobs:
-  test:
+  build:
+
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby: [ '2.5.x', '2.6.x' ]
-    name: Set up Ruby ${{ matrix.ruby }}
+
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-ruby@v1
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
-      - name: Build and test with RSpec
+          ruby-version: 2.6.x
+      - name: Build and test with Rake
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
