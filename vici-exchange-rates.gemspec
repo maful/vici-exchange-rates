@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['mafulprayoga@gmail.com']
 
   spec.summary       = %q{A Simple and Rich for Exchange Rates}
-  spec.homepage      = 'https://github.com/maful/exchange-rates-exchange-rates'
+  spec.homepage      = 'https://github.com/maful/vici-exchange-rates'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.
