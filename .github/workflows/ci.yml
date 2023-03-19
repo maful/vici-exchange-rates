@@ -1,29 +1,26 @@
 name: CI
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
-    branches:
-      - master
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   test:
+    strategy:
+      fail-fast: true
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby: [ '2.4', '2.5', '2.6', '2.7' ]
+        ruby: ['2.4', '2.5', '2.6', '2.7']
     name: Ruby ${{ matrix.ruby }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Setup Ruby
-        uses: actions/setup-ruby@v1
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-      - name: Test with RSpec
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
-          bundle exec rspec
+          bundler-cache: true
+      - name: Run test
+        run: bundle exec rspec
