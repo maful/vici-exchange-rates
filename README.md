@@ -8,6 +8,8 @@
 
 **Vici::ExchangeRates** is an unofficial SDK for the [ExchangeRatesAPI](https://exchangeratesapi.io). Exchange rates API is a free service for current and historical foreign exchange rates [published by the European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html).
 
+> [Libur.run](https://github.com/maful/libur.run) - Empower Your HR with Next-Gen Open Source Self-Serve Platform
+
 ### Note
 - This app requires JSON. If you're using JRuby < 1.7.0
   you'll need to add `gem "json"` to your Gemfile or similar.
