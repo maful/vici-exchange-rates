@@ -9,18 +9,20 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
+
     strategy:
       fail-fast: true
-    runs-on: ubuntu-latest
-    strategy:
       matrix:
-        ruby: ['2.4', '2.5', '2.6', '2.7']
-    name: Ruby ${{ matrix.ruby }}
+        ruby: ["2.4", "2.5", "2.6", "2.7"]
+
     steps:
       - uses: actions/checkout@v3
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - name: Run test
+
+      - name: Run tests
         run: bundle exec rspec
